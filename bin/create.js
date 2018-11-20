@@ -136,6 +136,10 @@ module.exports = Cli.createCommand('create', {
                 description: 'Allow the webtask to be called using a custom domain name. Using this option requires proof of domain ownership. This can be done by adding a TXT record type to the DNS of the chosen domain. The value of the record must be `webtask:container:{container}`, where {container} is the webtask container name to be associated with the custom domain. Many such TXT records can be created as needed.',
                 type: 'string'
             },
+            'outfile': {
+                description: 'Local output path. If included, webtask will be written to this path instead of uploaded. If you use this option, you should also use --bundle or its variants.',
+                type: 'string',
+            }
         },
     },
     params: {
